@@ -15,7 +15,7 @@ html {
   font-size: clamp(14px, 1vw, 50px);
 }
 section {
-  max-width: 1600px;
+  max-width: 2000px;
 }
 
 main {
@@ -466,6 +466,31 @@ main {
           height: 50px;
           padding: 1rem 2rem;
         }
+      }
+    }
+    section#view7 {
+      // .aside {
+      // }
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 4fr 1fr;
+      grid-template-areas:
+        "aside mid mid mid"
+        "aside bottom bottom bottom";
+      .aside {
+        grid-area: aside;
+      }
+      .mid {
+        grid-area: mid;
+        flex-direction: row;
+        justify-content: space-between;
+        .pages,
+        .cms,
+        .utility {
+          width: 30%;
+        }
+      }
+      .bottom {
+        grid-area: bottom;
       }
     }
   }

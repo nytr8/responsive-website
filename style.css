@@ -19,7 +19,7 @@ html {
 }
 
 section {
-  max-width: 1600px;
+  max-width: 2000px;
 }
 
 main {
@@ -460,5 +460,26 @@ main section#view7 .bottom h2 a {
     width: 20rem;
     height: 50px;
     padding: 1rem 2rem;
+  }
+  main section#view7 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: "aside mid mid mid" "aside bottom bottom bottom";
+  }
+  main section#view7 .aside {
+    grid-area: aside;
+  }
+  main section#view7 .mid {
+    grid-area: mid;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main section#view7 .mid .pages,
+  main section#view7 .mid .cms,
+  main section#view7 .mid .utility {
+    width: 30%;
+  }
+  main section#view7 .bottom {
+    grid-area: bottom;
   }
 }/*# sourceMappingURL=style.css.map */
